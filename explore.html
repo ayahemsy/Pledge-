@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/pledge.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="explore.css">
+    <title>Explore | Pledge</title>
+</head>
+<body>
+    <nav>
+        <div>
+          <img id="navImg" src="images/iconfinder_user_male2_172626 1.png" alt="user img">
+          <span id="navName">
+            <!-- USER NAME -->
+          </span>
+        </div>
+        <button class="btn btn-primary" id="logout">Logout</button>
+    </nav>
+    <section class="container post-form">
+        <form class="container " id="post-form">
+            <h3>Write or Edit Your Post</h3>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Service</label>
+              <input type="text" class="form-control" id="post-serv" placeholder="e.g baby sitter, nursing" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">City</label>
+              <input type="text" class="form-control" id="post-city" placeholder="e.g Cairo, Alexandria" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Region</label>
+              <input type="text" class="form-control" id="post-area" placeholder="e.g smouha, souter" required>
+            </div>
+            <div class="form-group date">
+              <label for="exampleFormControlInput1">Date and Time:</label>
+              <input type="datetime-local" class="form-control" id="post-dt-from" required>
+              <br>
+              <p>To:</p>
+              <input type="datetime-local" class="form-control" id="post-dt-to"  required>
+            </div>
+            <div class="form-group " >
+              <label for="post">Description</label>
+              <textarea class="form-control" id="post-text" rows="3" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Post</button>
+        </form>
+    </section>
+    <section class="container posts">
+      <section class="container filter">
+        <div>
+          <h4>filter:</h4>
+        </div>
+        <div class="radios">
+          <div class="displayAll" onclick="displayAll()">
+            <label for="all">All</label>
+            <input type="radio" name="sortby " id="all" checked>
+          </div>
+          <div class="vol" onclick="vol()">
+            <label for="vol">Volunteers</label>
+            <input type="radio" name="sortby " id="vol" value="vol" >
+          </div>
+        <div class="help" onclick="help()">
+            <label for="help">Help seekers</label>
+            <input type="radio" name="sortby " id="help" value="help" >
+          </div>
+        </div>
+      </section>
+        <!-- <div class="container post">
+          <div class="post-header">
+            <img src="images/iconfinder_user_male2_172626 1.png" alt="">
+            <h3>Moustafa Mahmoud</h3>
+          </div>
+          <div class="post-body">
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsa praesentium labore pariatur provident eum laborum esse, laudantium amet nisi.</p>
+            </div>
+            <div>
+              <span>City:</span><b>Alexandria</b> 
+              <span>Area:</span><b>Mayami</b>
+            </div>
+            <button class="btn btn-primary contact">Contact</button>
+          </div>
+          
+          <div class="post-footer">
+            
+            <div class="contact-info">
+              <h5>Contact info:</h5>
+              <div>
+              <a href="https://api.whatsapp.com/send?phone=201143547799&text=i%20want%20to%20contact%20you"><img src="images/whatsapp logo.png" alt="whatsapp" style="width: 50px;"><span>0123456789</span></a>
+              </div>
+              <div>
+               <a href="tel:555-555-5555"> <img src="images/phone-call.png" alt="whatsapp" style="width: 40px;"><span>0123456789</span></a>
+              </div>
+              <div>
+                <a href="mailto:devmoustafa97@gmail.com"> <img src="images/mail.png" alt="whatsapp" style="width: 30px;"><span>devmoustafa97@gmail.com</span></a>
+              </div>
+            </div>
+          </div>
+        </div>        
+       
+        <div class="container post">
+          <div class="post-header">
+            <img src="images/iconfinder_user_male2_172626 1.png" alt="">
+            <h3>Moustafa Mahmoud</h3>
+          </div>
+          <div class="post-body">
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsa praesentium labore pariatur provident eum laborum esse, laudantium amet nisi.</p>
+            </div>
+            <div>
+              <span>City:</span><b>Alexandria</b> 
+              <span>Area:</span><b>Mayami</b>
+            </div>
+            <button class="btn btn-primary contact">Contact</button>
+          </div>
+          
+          <div class="post-footer">
+            
+            <div class="contact-info">
+              <h5>Contact info:</h5>
+              <div>
+              <a href="https://api.whatsapp.com/send?phone=201143547799&text=i%20want%20to%20contact%20you"><img src="images/whatsapp logo.png" alt="whatsapp" style="width: 50px;"><span>0123456789</span></a>
+              </div>
+              <div>
+               <a href="tel:555-555-5555"> <img src="images/phone-call.png" alt="whatsapp" style="width: 40px;"><span>0123456789</span></a>
+              </div>
+              <div>
+                <a href="mailto:devmoustafa97@gmail.com"> <img src="images/mail.png" alt="whatsapp" style="width: 30px;"><span>devmoustafa97@gmail.com</span></a>
+              </div>
+            </div>
+          </div>
+        </div>        
+       
+        <div class="container post">
+          <div class="post-header">
+            <img src="images/iconfinder_user_male2_172626 1.png" alt="">
+            <h3>Moustafa Mahmoud</h3>
+          </div>
+          <div class="post-body">
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsa praesentium labore pariatur provident eum laborum esse, laudantium amet nisi.</p>
+            </div>
+            <div>
+              <span>City:</span><b>Alexandria</b> 
+              <span>Area:</span><b>Mayami</b>
+            </div>
+            <button class="btn btn-primary contact">Contact</button>
+          </div>
+          
+          <div class="post-footer">
+            
+            <div class="contact-info">
+              <h5>Contact info:</h5>
+              <div>
+              <a href="https://api.whatsapp.com/send?phone=201143547799&text=i%20want%20to%20contact%20you"><img src="images/whatsapp logo.png" alt="whatsapp" style="width: 50px;"><span>0123456789</span></a>
+              </div>
+              <div>
+               <a href="tel:555-555-5555"> <img src="images/phone-call.png" alt="whatsapp" style="width: 40px;"><span>0123456789</span></a>
+              </div>
+              <div>
+                <a href="mailto:devmoustafa97@gmail.com"> <img src="images/mail.png" alt="whatsapp" style="width: 30px;"><span>devmoustafa97@gmail.com</span></a>
+              </div>
+            </div>
+          </div>
+        </div>        
+       
+        <div class="container post">
+          <div class="post-header">
+            <img src="images/iconfinder_user_male2_172626 1.png" alt="">
+            <h3>Moustafa Mahmoud</h3>
+          </div>
+          <div class="post-body">
+            <div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsa praesentium labore pariatur provident eum laborum esse, laudantium amet nisi.</p>
+            </div>
+            <div>
+              <span>City:</span><b>Alexandria</b> 
+              <span>Area:</span><b>Mayami</b>
+            </div>
+            <button class="btn btn-primary contact">Contact</button>
+          </div>
+          
+          <div class="post-footer">
+            
+            <div class="contact-info">
+              <h5>Contact info:</h5>
+              <div>
+              <a href="https://api.whatsapp.com/send?phone=201143547799&text=i%20want%20to%20contact%20you"><img src="images/whatsapp logo.png" alt="whatsapp" style="width: 50px;"><span>0123456789</span></a>
+              </div>
+              <div>
+               <a href="tel:555-555-5555"> <img src="images/phone-call.png" alt="whatsapp" style="width: 40px;"><span>0123456789</span></a>
+              </div>
+              <div>
+                <a href="mailto:devmoustafa97@gmail.com"> <img src="images/mail.png" alt="whatsapp" style="width: 30px;"><span>devmoustafa97@gmail.com</span></a>
+              </div>
+            </div>
+          </div>
+        </div>        
+        -->
+        
+    </section>
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-storage.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAJAunK_A_Q7F12xpw9_4q33GKrFK5L_3k",
+          authDomain: "pledge-1.firebaseapp.com",
+          databaseURL: "https://pledge-1.firebaseio.com",
+          projectId: "pledge-1",
+          storageBucket: "pledge-1.appspot.com",
+          messagingSenderId: "419471172885",
+          appId: "1:419471172885:web:c802bc4bedc36340fdf51c",
+          measurementId: "G-F0R35Y7Y0G"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const storage = firebase.storage();
+    </script>
+    <script src="explore.js"></script>
+</body>
+</html>
